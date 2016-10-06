@@ -241,4 +241,5 @@ select count(pid), --counting the products
 from customers c inner join products p on c.city = p.city --products and customers with the same city
 where c.city = p.city
 group by p.city
---find the min
+order by count(pid) ASC
+Limit 1
